@@ -5,6 +5,7 @@
 This project focuses on classifying mushrooms as either edible or poisonous using the Mushroom Classification Dataset from [Kaggle](https://www.kaggle.com/datasets/uciml/mushroom-classification). Using machine learning, the goal was to develop an accurate model to classify mushrooms based on their features.
 
 ## Overview
+![image](https://github.com/user-attachments/assets/94ce3b54-950a-48ea-ac6b-756e3fe0911f)
 
 * This section could contain a short paragraph which include the following:
   * **Definition of the tasks / challenge**  Ex: The task, as defined by the Kaggle challenge is to use a time series of 12 features, sampled daily for 1 month, to predict the next day's price of a stock.
