@@ -13,47 +13,75 @@ After experimenting with multiple models, the Random Forest classifier was chose
 
 ## Summary of Workdone
 
-Include only the sections that are relevant an appropriate.
+## Key Steps
 
-### Data
+### Exploratory Data Analysis (EDA)
 
-* Data:
-  * Type: For example
-    * Input: medical images (1000x1000 pixel jpegs), CSV file: image filename -> diagnosis
-    * Input: CSV file of features, output: signal/background flag in 1st column.
-  * Size: How much data?
-  * Instances (Train, Test, Validation Split): how many data points? Ex: 1000 patients for training, 200 for testing, none for validation
+Important findings:
+- `veil-type` had no variability and was excluded.
+- Missing values in `stalk-root` (represented as `?`) were replaced with a new category called `"unknown"`.
 
-#### Preprocessing / Clean up
+Class distribution appeared nearly even:
 
-* Describe any manipulations you performed to the data.
+![Class Distribution Placeholder](./images/class_distribution.png)
 
-#### Data Visualization
+### Data Cleaning & Preprocessing
 
-Show a few visualization of the data and say a few words about what you see.
+Steps involved:
+- All input features were one-hot encoded.
+- The target column was mapped to `0` (edible) and `1` (poisonous).
 
-### Problem Formulation
+### Visual Analysis
 
-* Define:
-  * Input / Output
-  * Models
-    * Describe the different models you tried and why.
-  * Loss, Optimizer, other Hyperparameters.
+To better understand the dataset, key visualizations were created:
 
-### Training
+- **Feature Importance:** A Random Forest model helped identify the 15 most influential features, with `odor` and `gill-size` ranking highest.
 
-* Describe the training:
-  * How you trained: software and hardware.
-  * How did training take.
-  * Training curves (loss vs epoch for test/train).
-  * How did you decide to stop training.
-  * Any difficulties? How did you resolve them?
+![Top Features Placeholder](./images/top_feature_importance.png)
 
-### Performance Comparison
+- **Odor Analysis:** The `odor` feature displayed a clear distinction between the two mushroom classes.
 
-* Clearly define the key performance metric(s).
-* Show/compare results in one table.
-* Show one (or few) visualization(s) of results, for example ROC curves.
+![Odor Feature Plot Placeholder](./images/odor_feature_plot.png)
+
+### Problem Setup
+
+This task was treated as a standard binary classification problem:
+- **Input:** Processed features after encoding
+- **Output:** `0` (edible) or `1` (poisonous)
+
+Evaluated models:
+- Logistic Regression
+- Random Forest
+- K-Nearest Neighbors (KNN)
+- Support Vector Machines (SVM)
+
+### Model Training & Comparison
+
+Models were trained using 70% of the data, with 15% reserved for validation. Results:
+
+| Model                  | Validation Accuracy | Test Accuracy | Notes                                     |
+|------------------------|---------------------|---------------|-------------------------------------------|
+| Logistic Regression    | 99.75%              | 99.75%        | Interpretable and efficient               |
+| Random Forest          | 100%                | 100%          | Best performance + feature insights       |
+| K-Nearest Neighbors    | 100%                | 100%          | Slower with larger datasets               |
+| Support Vector Machines| 100%                | 100%          | Accurate, less transparent                |
+
+**Final choice:** Random Forest — for its blend of accuracy and interpretability.
+
+### Final Evaluation
+
+The selected model, Random Forest, achieved flawless accuracy on the test set — confirming its generalization capability.
+
+### Submission Output
+
+The final predictions are stored in `submission.csv`. Sample:
+
+| Index | Prediction |
+|-------|------------|
+| 0     | 1          |
+| 1     | 0          |
+| 2     | 1          |
+| ...   | ...        |
 
 ### Conclusions
 
