@@ -6,10 +6,10 @@ This project focuses on classifying mushrooms as either edible or poisonous usin
 
 ## Overview
 
-* This section could contain a short paragraph which include the following:
-  * **Definition of the tasks / challenge**  Ex: The task, as defined by the Kaggle challenge is to use a time series of 12 features, sampled daily for 1 month, to predict the next day's price of a stock.
-  * **Your approach** Ex: The approach in this repository formulates the problem as regression task, using deep recurrent neural networks as the model with the full time series of features as input. We compared the performance of 3 different network architectures.
-  * **Summary of the performance achieved** Ex: Our best model was able to predict the next day stock price within 23%, 90% of the time. At the time of writing, the best performance on Kaggle of this metric is 18%.
+The dataset includes 8,124 entries with 22 categorical attributes such as cap color, gill attachment, and odor. The target variable (`class`) indicates if a mushroom is edible (`e`) or poisonous (`p`). Since the dataset is balanced, it's ideal for binary classification tasks.
+
+After experimenting with multiple models, the Random Forest classifier was chosen due to its perfect performance and ability to highlight feature importance.
+
 
 ## Summary of Workdone
 
@@ -57,20 +57,21 @@ Show a few visualization of the data and say a few words about what you see.
 
 ### Conclusions
 
-* State any conclusions you can infer from your work. Example: LSTM work better than GRU.
+This project demonstrates the effectiveness of ensemble methods like Random Forest in handling classification tasks with categorical data. The success came from:
+- Careful data preparation
+- Visualization-driven insights
+- Rigorous model testing
 
 ### Future Work
-
-* What would be the next thing that you would try.
-* What are some other studies that can be done starting from here.
+Ideas for further development:
+- Fine-tune hyperparameters for better generalization
+- Apply workflow to similar biological datasets
 
 ## How to reproduce results
 
-* In this section, provide instructions at least one of the following:
-   * Reproduce your results fully, including training.
-   * Apply this package to other data. For example, how to use the model you trained.
-   * Use this package to perform their own study.
-* Also describe what resources to use for this package, if appropirate. For example, point them to Collab and TPUs.
+1. Run `Project_Code.ipynb` for data preparation and model training.
+2. Follow notebook cells for model comparisons and evaluations.
+3. Use `submission.csv` for result review or external validation.
 
 ### Overview of files in repository
 
