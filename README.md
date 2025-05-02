@@ -76,9 +76,9 @@ The final predictions are stored in `submission.csv`. Sample:
 
 | Index | Prediction |
 |-------|------------|
-| 0     | 1          |
+| 0     | 0          |
 | 1     | 0          |
-| 2     | 1          |
+| 2     | 0          |
 | ...   | ...        |
 
 ### Conclusions
