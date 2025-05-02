@@ -38,11 +38,8 @@ To better understand the dataset, key visualizations were created:
 
 - **Feature Importance:** A Random Forest model helped identify the 15 most influential features, with `odor` and `gill-size` ranking highest.
 
-![Top Features Placeholder](./images/top_feature_importance.png)
+![image](https://github.com/user-attachments/assets/c37d0d90-0093-4ec6-987f-16ae3a6022da)
 
-- **Odor Analysis:** The `odor` feature displayed a clear distinction between the two mushroom classes.
-
-![Odor Feature Plot Placeholder](./images/odor_feature_plot.png)
 
 ### Problem Setup
 
@@ -113,7 +110,7 @@ Required Packages:
 - pandas
 - scikit-learn
 - matplotlib
-- 
+- numpy
 ## Citations
 
 - Mushroom Classification Dataset: [Kaggle](https://www.kaggle.com/datasets/uciml/mushroom-classification).
