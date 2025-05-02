@@ -23,7 +23,8 @@ Important findings:
 
 Class distribution appeared nearly even:
 
-![Class Distribution Placeholder](./images/class_distribution.png)
+![image](https://github.com/user-attachments/assets/9db125c5-56a2-4d08-8672-90d43732e8f0)
+
 
 ### Data Cleaning & Preprocessing
 
